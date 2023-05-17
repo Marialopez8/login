@@ -1,0 +1,17 @@
+<h1>Login</h1>
+<body>
+<form [formGroup]="signup" (ngSubmit)="enviar(signup.value)">
+  <label>Email: </label>
+  <input formControlName="email" type="email" />
+  <div *ngIf="signup.get('email')?.hasError('email') && signup.get('email')?.touched">introduce el email</div>
+  <br/>
+  <label>Contraseña: </label>
+  <input formControlName="contrasena" type="password" />
+  <br/>
+  <!-- <button [disabled]="signup.invalid" type="submit">iniciar sesion </button> -->
+  <button class="boton">
+  <a href="http://home210.s3-website-us-west-2.amazonaws.com">iniciar sesion</a>
+</button>
+</form>
+
+</body>
